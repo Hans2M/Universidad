@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒 Acceso Protegido</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <!-- 🌟 Contenedor de Login -->
+    <div class="login-container">
+        <h2>🔒 Acceso Protegido</h2>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        <!-- ⚠️ Mensaje de Error -->
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <!-- 🎥 GIF de Acceso -->
+        <div class="gif-container">
+            <img src="/static/zombi.gif" alt="Animación de acceso">
+        </div>
+    </div>
+
+</body>
+</html>
